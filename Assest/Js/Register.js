@@ -115,15 +115,15 @@ function showSuccess (input, message){
 function saveNameToLocalStorage(email,username,password) {
 
 
-  const users = JSON.parse(localStorage.getItem('users')) || []
+  let user = [];
 
-  users.push({
+  user.push({
     email: email.value,
     password : password.value,
     username: username.value
   })
   
-  localStorage.setItem("user" ,JSON.stringify(users));
+  localStorage.setItem("user" ,JSON.stringify(user));
 }
 
 
