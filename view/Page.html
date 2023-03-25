@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Assest/Css/page.css">
     <link rel="icon" type="image/x-icon" href="/Assest/Img/xg_Faker_8.jpg">
+    <link rel="stylesheet" href="/Assest/Css/info__table.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <script src="./Assest/Js/Loggin.js" defer></script>
-    <script src="./Assest/Js/Register.js" defer></script>
-    <script src="./Assest/Js/Page.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/Assest/Js/Page.js" defer></script>
+    <script src="/Assest/Js/nav__search.js" defer></script>
     <title>Fresh</title>
 </head>
 <body>
     <div class="navbar">
         <div class="wrap__content__navbar">
+           <span class="sidebar">
+            <i class="fa-solid fa-bars menu"></i>
+           </span>
+              
             <div class="navbar__logo ">
                 <img src="/Assest/Img/reallogo.png" alt="Logo" id="logo">
             </div>
@@ -31,14 +35,57 @@
             </div>
         </div>
             <div class="navbar__search ">
-                <i class='bx bx-search'></i>
+                <input type="text" id="search__input">
             </div>
+            <i class='bx bx-search search__icon'></i>
+
             <div class="navbar__info ">
                 <img src="/Assest/Img/Avatar-trang.jpg" id="info__img" alt="">
             </div>
+     
+        </div>
+    </div>
+
+    <!-- Info--table -->
+        <div class="info__table">
+            <div class="infomation">
+                <div class="wrap__1">
+                <div class="table__info__img">
+                <img src="/Assest/Img/Avatar-trang.jpg"  alt="" class="talbe__img">
+                </div>
+                <div class="info__table__account">
+                    <h1 class="table__username">Danhnguyen</h1>
+                    <small>ngdanh1509@Gmail.com</small>
+                </div>
+                </div>
+                </div>
+            
+        <ul class="helping__acount">
+            <div class="second__ul__table__account">
+                 <li class="setting__account helping__acount__content">
+                    Cài đặt tài khoản 
+                 </li>
+                <li class="Helping helping__acount__content" >
+                    Nhận trợ giúp
+                </li>
+            </div>
+        </ul>
+            <div class="download wrap__3">
+                Tải Fresh App
+            </div>
+            <div class="marketing wrap__3">
+                Giới thiệu cho bạn bè <i class="fa-solid fa-gift"></i>  
+            </div>
+            <div class="create__group wrap__3">
+                Tạo nhóm mua sắm 
+            </div>
+            <div class="policy wrap__3">
+                Chính sách của Fresh
+            </div>
+            <div class="logout wrap__3">
+                Đăng xuất 
+            </div>
         </div>
 
-    </div>
-    <h1>Đang làm thêm</h1>
 </body>
 </html>

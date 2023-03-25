@@ -21,9 +21,7 @@ body {
 
     
 }
-.background{
-    
-}
+
 .container {
     background: white;
     padding: 40px;
@@ -68,7 +66,7 @@ body {
     top:70px;
 }
 .submit {
-    margin:50px 0 0 0   ;
+    margin:50px 0 0 0 ;
     width: 100%;
     padding: 20px;
     text-align: center;

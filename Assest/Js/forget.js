@@ -74,7 +74,7 @@ function CheckError(inputs) {
             email:email.value,
             password:password.value
         })
-        localStorage.setItem("users",JSON.stringify(user));
+        localStorage.setItem("usersgit add .",JSON.stringify(user));
     } else {
         return false;
     }

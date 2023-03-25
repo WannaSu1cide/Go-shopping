@@ -1,0 +1,74 @@
+.info__table{
+    height: 50%;
+    width: 20%;
+    border: 1px solid;
+    position: absolute;
+    top: 9%;
+    right: 5%;
+    background: #fff;
+    display: none;
+}
+.infomation{
+    height: 30%;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    
+
+}
+.wrap__1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.table__info__img{
+    width: 20%;
+    height:60%;
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+}
+.table__info__img .talbe__img{
+    height: 100%;
+    width: 100%;
+   border-radius: 50%;
+}
+.info__table__account .table__username{
+    font-size: 20px;
+}
+
+/* Second wrap */
+.helping__acount{
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid #dadada;
+}
+.second__ul__table__account{
+    height: 100%;
+    width: 100%;
+}
+.helping__acount__content{
+    list-style-type: none;
+    padding:5px 0 10px 10px ;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.helping__acount__content:hover{
+    background: #dadada;
+}
+.wrap__3{
+    padding: 0 0  0 10px;    
+    margin:  0 0 0;
+    line-height: 35px;
+
+}
+.wrap__3:hover {
+    background: #dadada;
+}
+
+.show__table__info{
+    display: block;
+}
