@@ -12,8 +12,6 @@
     height: 30%;
     width: 100%;
     border-bottom: 1px solid #dadada;
-    
-
 }
 .wrap__1{
     width: 100%;
@@ -33,6 +31,25 @@
     height: 100%;
     width: 100%;
    border-radius: 50%;
+}
+.change__info__img{
+    width: 20%;
+    height:18%;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    display: block;
+   position: absolute;
+   top:7%;
+   display: none;
+}
+.change__img{
+    font-size: 25px;
+    margin: 20px;
+    color: white;
+    display: none;
+}
+.table__info__img:hover .change__info__img{
+    display: block;
 }
 .info__table__account .table__username{
     font-size: 20px;
@@ -71,4 +88,7 @@
 
 .show__table__info{
     display: block;
+}
+.close__table__info{
+    display: none;
 }
