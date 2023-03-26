@@ -2,6 +2,7 @@ const search__icon = document.querySelector(".search__icon")
 let searching  = true;
 const navbar__input = document.querySelector("#search__input")
 const navSearch = document.querySelector(".navbar__search")
+
 function submit(){
     if(searching){
         navSearch.classList.add("show__search");
@@ -18,7 +19,6 @@ search__icon.addEventListener("click",submit)
 
 navSearch.addEventListener("keydown",(e)=>{
     if(e.keyCode ===13){
-
         submit()
         e.preventDefault();
         // appear =false;
