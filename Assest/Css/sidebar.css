@@ -1,8 +1,8 @@
 .sidebar {
     margin: 5% 0 0 0;
-    height: 67%;
+    height:66%;
     width: 0;
-    background:rgba(0, 0, 0,0.5);
+    background:linear-gradient(#ddd6f3 ,#faaca8);
     
 }
 .sidebar__content{  
@@ -17,7 +17,7 @@
     visibility: hidden;
 }
 .sidebar__content:hover {
-    background: #dadada;
+    background: black;
     color :white;
 }
 .sidebar__img{

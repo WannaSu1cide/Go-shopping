@@ -31,6 +31,8 @@ function changeTheClassWhenCLickAgain(input, classList, removeclassList) {
   );
  //Click body to close the table
 body.addEventListener("click",()=>{
-        changeTheClassWhenCLickAgain(infoTable,"show__table__info","close__table__info")
-    }
+        if(infoTable.classList.contains("show__table__info")){
+            infoTable.classList.remove("show__table__info")
+        }
+}
 )

@@ -1,3 +1,4 @@
+'use strict'
 const email =document.querySelector("#email");
 const username =document.querySelector("#Name");
 const password =document.querySelector("#password1");
@@ -8,23 +9,6 @@ const form = document.querySelector("form");
 const parent = document.querySelector(".control-form")
 const spanBar = document.querySelectorAll(".spanBar")
 const inputs = document.querySelectorAll('input');
-
-
-function checkError(){
-  for(let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value.length === 0) {
-      showError(inputs[i], "Type something..");
-      return false;
-    } else if(inputs[i].value.length <=6) {
-      showError(inputs[i], "You must have more than 6 character");
-      return false
-    }else {
-      showSuccess(inputs[i],"Success");
-      return true
-    }
-  }
-}
-
 function showError (input, message){
   const error = input.nextElementSibling;
   const spanBar = error.previousElementSibling;
@@ -33,7 +17,7 @@ function showError (input, message){
   error.classList.add("errorColor");
   spanBar.classList.add("errorBar");
   error.classList.remove("successColor");
-  spanBar.classList.remove("successBar");
+  spanBar.classList.remove("successBar");   
 }
 
 function showSuccess (input, message){
@@ -45,8 +29,36 @@ function showSuccess (input, message){
   error.classList.remove("errorColor");
   spanBar.classList.remove("errorBar");
 }
+
+function checkError(){
+  for(let i = 0; i < inputs.length; i++) {
+    if (inputs[i].value.length === 0) {
+      showError(inputs[i], "Type something..");
+      return false;
+    } else if(inputs[i].value.length <=6) {
+      showError(inputs[i],"You must have more than 6 character");
+      return false;
+    }else {
+      return true;
+    }
+  }
+}
+function isEmailError(input) {
+  let emailRegex =
+  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+   let emailError = emailRegex.test(input.value);
+  if (emailError === true ){
+    showSuccess(email,"Success")
+    return true;
+  } else {
+    showError(email,"Invalid email")
+    console.log(123);
+    return false;
+  }
+} 
+
+
   function checkName(input){
-  
     if(input.value === ""){
         showError(username,"type something");
         return false;
@@ -61,8 +73,6 @@ function showSuccess (input, message){
  
 
   }
-
-
       function checkPassword(){
           if(password.value.trim().length <=6 && password.value.trim().length > 0  ){
               showError(password,"Type more than 6 character");
@@ -78,7 +88,7 @@ function showSuccess (input, message){
        
     }
     function checkConfirmPassword(){
-      if(confirmPassword.value !== password.value && checkPassword() === true ){
+      if(confirmPassword.value !== password.value && password.value.trim().length>6 ){
         showError(confirmPassword,"Wrong password");
         confirmPassword.value = "";
         return false
@@ -95,22 +105,6 @@ function showSuccess (input, message){
       }
       
     }
-    function isEmailError(input) {
-      const emailRegex =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-      let emailError = emailRegex.test(input.value);
-      if (emailError !== true) {
-        showError(email,"Invalid email");
-        return false;
-      } else {
-        showSuccess(email,"Success");
-        return true;
-      }
-    }
-    
-
-
-
 
 function saveNameToLocalStorage(email,username,password) {
 
@@ -149,10 +143,10 @@ function isNameInLocalStorage() {
 submit.addEventListener("click",(e)=>{
     e.preventDefault();
     checkError();
+    isEmailError(email);
+    checkName(username);
     checkPassword();
      checkConfirmPassword();
-     isEmailError(email);
-     checkName(username);
     if(checkAll() === true ){
       saveNameToLocalStorage(email,username,password)
       window.location.href= "/view/Loggin.html"

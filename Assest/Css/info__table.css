@@ -1,12 +1,14 @@
 .info__table{
     height: 50%;
     width: 20%;
-    border: 1px solid;
     position: absolute;
     top: 9%;
     right: 5%;
     background: #fff;
     display: none;
+    border-radius: 10px;
+    border: none;
+    filter: drop-shadow(0 0 0.55rem black);
 }
 .infomation{
     height: 30%;
