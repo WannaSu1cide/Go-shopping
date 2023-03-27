@@ -3,8 +3,8 @@ const loggin__password = document.querySelector(".loggin__password");
 const btn  = document.querySelector(".loggin__submit")
 const email__Error = document.querySelector(".control__loggin .small")
 const password__Error = document.querySelector(".small2")
-        const user = localStorage.getItem("user");
-        const json = JSON.parse(user);
+const user = localStorage.getItem("user");    
+const json = JSON.parse(user);
 
         var Email = json.map(function(x){
                 return x.email;
@@ -48,14 +48,6 @@ const password__Error = document.querySelector(".small2")
                         console.log("fail")
                 }
         }
-
-     
-
-        
-
-
-
-
 btn.addEventListener("click",()=>{
         showLogginError();
         checkPasswordWrong();
