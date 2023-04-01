@@ -62,7 +62,7 @@
     height: 20%;
     width: 100%;
     flex-direction: column;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;   
 }
 .second__ul__table__account{
     height: 100%;

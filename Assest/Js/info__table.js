@@ -19,12 +19,9 @@ function changeTheClassWhenCLickAgain(input, classList, removeclassList) {
       input.classList.add(removeclassList);
     } else {
       input.classList.add(classList);
-      console.log(classList)
       input.classList.remove(removeclassList);
     }
 }
-  
-  // Click the info img and it shows the setting table
   infoImg.addEventListener("click", function() {
    changeTheClassWhenCLickAgain(infoTable, "show__table__info", "close__table__info");
 }
@@ -36,3 +33,4 @@ body.addEventListener("click",()=>{
         }
 }
 )
+    

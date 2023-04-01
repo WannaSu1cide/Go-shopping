@@ -3,8 +3,8 @@
     height:66%;
     width: 0;
     background:linear-gradient(#ddd6f3 ,#faaca8);
-    
 }
+
 .sidebar__content{  
     padding-bottom: 15px;
     padding-top: 15px;
@@ -23,6 +23,7 @@
 .sidebar__img{
     height: 10%;
     width: 100%;
+    user-select: none;
 
 }
 .sidebar__img .sidebar__img__content {

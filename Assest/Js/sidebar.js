@@ -1,8 +1,8 @@
+
 const body = document.querySelector("body")
 const menu = document.querySelector(".menu")
 const sidebar =document.querySelector(".sidebar")
 const sidebar__content = document.querySelectorAll(".sidebar__content")
-
 
 
 body.addEventListener("click",()=>{
@@ -10,7 +10,6 @@ body.addEventListener("click",()=>{
         sidebar.classList.remove("show__menu");
     }
 })
-
 
 menu.addEventListener("click",()=>{
     changeTheClassWhenCLickAgain(sidebar,"show__menu","close__menu")
